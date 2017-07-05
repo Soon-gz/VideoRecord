@@ -4,8 +4,13 @@
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/GIF2.gif)
 
 制作的gif图有噪点没办法啊。还是看看截图吧
+
+
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/a.jpg)
+
+
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/b.jpg)
+
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/c.jpg)
 
 好吧，都是恍恍惚惚红红火火~。不过这些都是小事儿，我最后会把代码放在git上，需要的朋友自己去拉下来跑一下就知道效果了。
