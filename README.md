@@ -19,10 +19,18 @@
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/f.jpg)
 视频存放的默认地址，在外面设置，这样不用每次都去修改里面的代码嘛。相关的最小录制时间，最大录制时间，我们老板说了，微信只能录6秒，那咱们也要录6秒。时间短了就算没录上。好吧，加了两个限制参数就ok了。当然还要能手动取消录制啊。这个需要在onTouch的事件中做处理了。当然还要录制视频的第一帧做显示，还要有个进度条，为了让用户知道自己录制了多少嘛。好吧，这些都easy。
 问题一个一个来解决：
+
+
 1、如何拿到视频第一帧？
+
+
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/g.jpg)
 谷歌提供的媒体相关api中有个 MediaMetadataRetriever，设置资源来源之后。可以获取该资源相关的信息。ok了。
+
+
 2、如何展示进度条，自定义进度条。
+
+
   自定义一个不就Ok了，一条线，主要的还是如何更新，把更新相关设置暴露给调用层。需要几秒，就设置几秒，开启一个线程，然后每一秒回调更新UI就搞定了，这里要调用postInvalidate();
 ```
 public class VideoProgressView extends View {
@@ -150,7 +158,11 @@ public class VideoProgressView extends View {
 
 }
 ```
+
+
 3、如何实现手动取消呢？
+
+
 这个需要在录制的Activity里做文章了，自定义的Surface保证功能单一，只是摄像头视频录制相关设置。我们首先要分析点击录制那个按钮有几个状态。第一，点下去，是开始录制视频。第二，一直按着，滑动到按钮范围外取消。第三、抬起。抬起时需要判断抬起位置和按住的时间长短是否达到了最短时间。这就是onTouch的三个状态。那么就设置button的onTouch了。
 
 ```
