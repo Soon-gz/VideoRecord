@@ -1,5 +1,5 @@
 
-[博客地址文章地址](http://blog.csdn.net/sw5131899/article/details/52848957)
+[博客地址文章地址](http://blog.csdn.net/sw5131899/article/details/74390640)
 
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/GIF2.gif)
 
