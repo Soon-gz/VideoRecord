@@ -14,9 +14,13 @@
 ![image](https://github.com/SingleShu/VideoRecord/raw/master/img/c.jpg)
 
 好吧，都是恍恍惚惚红红火火~。不过这些都是小事儿，我最后会把代码放在git上，需要的朋友自己去拉下来跑一下就知道效果了。
-![image](https://github.com/SingleShu/VideoRecord/raw/master/img/d.jpg)
+
+![image](https://github.com/SingleShu/VideoRecord/raw/master/img/d.png)
+
 一共就是这些类。当然最重要还是VideoRecordSurface这个类里面的逻辑，对摄像头做了各种初始化，设置还有录制的视频质量，时间等相关设置。
-![image](https://github.com/SingleShu/VideoRecord/raw/master/img/f.jpg)
+
+![image](https://github.com/SingleShu/VideoRecord/raw/master/img/e.png)
+
 视频存放的默认地址，在外面设置，这样不用每次都去修改里面的代码嘛。相关的最小录制时间，最大录制时间，我们老板说了，微信只能录6秒，那咱们也要录6秒。时间短了就算没录上。好吧，加了两个限制参数就ok了。当然还要能手动取消录制啊。这个需要在onTouch的事件中做处理了。当然还要录制视频的第一帧做显示，还要有个进度条，为了让用户知道自己录制了多少嘛。好吧，这些都easy。
 问题一个一个来解决：
 
@@ -24,7 +28,8 @@
 1、如何拿到视频第一帧？
 
 
-![image](https://github.com/SingleShu/VideoRecord/raw/master/img/g.jpg)
+![image](https://github.com/SingleShu/VideoRecord/raw/master/img/f.png)
+
 谷歌提供的媒体相关api中有个 MediaMetadataRetriever，设置资源来源之后。可以获取该资源相关的信息。ok了。
 
 
